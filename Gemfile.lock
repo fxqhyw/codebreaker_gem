@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    codebreaker (0.1.0)
+    lkr-codebreaker (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -27,7 +27,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
-  codebreaker!
+  lkr-codebreaker!
   rake (~> 10.0)
   rspec (~> 3.0)
 
