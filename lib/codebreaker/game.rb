@@ -25,16 +25,6 @@ module Codebreaker
       exact_matches + number_matches
     end
 
-    def save_result(username:, game_status:, file_name: 'player_results.txt')
-      File.open(file_name, 'a') do |file|
-        file.puts("Name: #{username}")
-        file.puts("Game status: #{game_status}")
-        file.puts("Attempts used: #{@used_attempts}")
-        file.puts("Hints used: #{@used_hints}")
-        file.puts('*' * 40)
-      end
-    end
-
     private
 
     def generate
