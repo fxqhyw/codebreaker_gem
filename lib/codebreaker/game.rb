@@ -25,6 +25,14 @@ module Codebreaker
       exact_matches + number_matches
     end
 
+    def available_attempts
+      ATTEMPTS - @game.used_attempts
+    end
+
+    def available_hints
+      HINTS - @game.used_hints
+    end
+
     private
 
     def generate
