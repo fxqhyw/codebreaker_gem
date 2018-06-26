@@ -3,13 +3,14 @@ module Codebreaker
     ATTEMPTS = 10
     HINTS = 4
 
-    attr_reader :used_attempts, :used_hints
+    attr_reader :used_attempts, :used_hints, :made_guesses
 
     def initialize
       @secret_code = generate
       @shuffled_secret_code = @secret_code.shuffle
       @used_attempts = 0
       @used_hints = 0
+      @made_guesses = {}
     end
 
     def hint
@@ -22,7 +23,9 @@ module Codebreaker
       @used_attempts += 1
       @user_code = user_code.chars.map(&:to_i)
       return '++++' if @user_code == @secret_code
-      exact_matches + number_matches
+      result = exact_matches + number_matches
+      @made_guesses[user_code] = result
+      result
     end
 
     def available_attempts

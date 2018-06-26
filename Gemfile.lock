@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    lkr-codebreaker (0.2.3)
+    lkr-codebreaker (0.2.4)
 
 GEM
   remote: https://rubygems.org/
